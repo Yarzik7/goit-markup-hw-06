@@ -339,6 +339,36 @@ p {
   margin-right: 70px;
 }
 
+.footer-form {
+  margin-left: auto;
+}
+
+.footer-fields {
+  min-width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--primary-white-color);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.footer-fields::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--footer-contacts-color);
+}
+
 .join-title {
   margin-bottom: 20px;
 
@@ -400,7 +430,8 @@ p {
   cursor: pointer;
 }
 
-.buttons.hero-button {
+.buttons.hero-button,
+.buttons.subscription-button {
   min-width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -415,6 +446,12 @@ p {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition-property: background-color;
+}
+
+.buttons.subscription-button {
+  padding-right: 28px;
+  padding-left: 28px;
+  margin-left: 12px;
 }
 
 .buttons.filter-buttons {
