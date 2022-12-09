@@ -294,7 +294,7 @@ p {
   outline: none;
 }
 
-.modal-form .form-lable:focus-within .custom-checkbox {
+.modal-form .form-lable:focus-within .icon {
   fill: var(--accent-color);
 }
 
