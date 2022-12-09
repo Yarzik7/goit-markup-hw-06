@@ -200,8 +200,7 @@ p {
   left: 12px;
 }
 
-.modal-form .modal-fields,
-.modal-form .modal-comment {
+.modal-form .modal-fields {
   min-width: 100%;
   height: 40px;
   padding-top: 11px;
@@ -236,7 +235,7 @@ p {
   resize: none;
 }
 
-.modal-form .modal-comment::placeholder {
+.modal-form .modal-fields.modal-comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -291,6 +290,7 @@ p {
 
 .modal-form .form-lable:focus-within .modal-fields {
   border-color: var(--accent-color);
+  outline: none;
 }
 
 .modal-form .form-lable:focus-within .icon {
@@ -536,10 +536,17 @@ p {
   border: 1px solid var(--footer-input-border);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 .footer-fields::placeholder {
   color: var(--footer-contacts-color);
+}
+
+.form-subscribe .subscribe-label:focus-within > .footer-fields {
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .join-title {

@@ -435,8 +435,8 @@
           </ul>
         </div>
         <div class="footer-form">
-          <form class="form-subscribe">
-            <label>
+          <form name="form-for-subscribe" class="form-subscribe">
+            <label class="subscribe-label">
               <p class="join-title">Підпишіться на розсилку</p>
               <input type="email" name="email" placeholder="E-mail" class="footer-fields" />
             </label>
@@ -454,7 +454,7 @@
     <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form class="modal-form">
+        <form name="form-for-modal" class="modal-form">
           <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
           <label class="form-lable">
             <p class="input-lable">Ім'я</p>
@@ -485,24 +485,23 @@
           </label>
           <label class="form-lable comment-label">
             <p class="input-lable">Коментар</p>
-            <div>
-              <textarea name="comment" placeholder="Введіть текст" class="modal-comment"></textarea>
-              <!-- <svg class="icon" width="18" heiht="18">
-              <use href=""></use>
-            </svg> -->
-            </div>
+            <textarea
+              name="comment"
+              placeholder="Введіть текст"
+              class="modal-fields modal-comment"
+            ></textarea>
           </label>
           <label class="form-label agree">
             <!-- <div class="agree-container"> -->
-              <input type="checkbox" name="" class="agree-checkbox" />
-              <span class="custom-checkbox">
-                <svg class="icon" width="16" height="15">
-                  <use href="/images/icons.svg#checked"></use>
-                </svg>
-              </span>
-              <p class="agree-text">
-                Погоджуюся з розсилкою та приймаю <a href="#" class="link">Умови договору</a>
-              </p>
+            <input type="checkbox" name="" class="agree-checkbox" />
+            <span class="custom-checkbox">
+              <svg class="icon" width="16" height="15">
+                <use href="/images/icons.svg#checked"></use>
+              </svg>
+            </span>
+            <p class="agree-text">
+              Погоджуюся з розсилкою та приймаю <a href="#" class="link">Умови договору</a>
+            </p>
             <!-- </div> -->
           </label>
           <button type="submit" class="buttons action-buttons submit-button">Відправити</button>
