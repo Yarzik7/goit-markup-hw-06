@@ -346,11 +346,18 @@
           </ul>
         </div>
         <div class="footer-form">
-          <label for="">
-            Підпишіться на розсилку
-            <input type="email">
-          </label>
-          <button type="submit">Підписатися</button>
+          <form name="form-for-subscribe" class="form-subscribe">
+            <label class="subscribe-label">
+              <p class="join-title">Підпишіться на розсилку</p>
+              <input type="email" name="email" placeholder="E-mail" class="footer-fields" />
+            </label>
+            <button type="submit" class="buttons action-buttons subscribe-button">
+              Підписатися
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

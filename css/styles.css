@@ -144,7 +144,7 @@ p {
   
 } */
 
-.modal-form .form-title {
+.form-modal > .form-title {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -155,7 +155,7 @@ p {
   color: var(--title-text-color);
 }
 
-.modal-form .form-lable {
+.form-modal-lable {
   display: block;
   margin-bottom: 10px;
 
@@ -164,7 +164,7 @@ p {
   letter-spacing: 0.01em;
 }
 
-.modal-form .form-label.agree {
+.form-modal > .agree-label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,7 @@ p {
   margin-right: auto;
 } */
 
-.modal-form .input-lable {
+.form-modal-lable > .input-caption {
   margin: 0;
   padding: 0;
   margin-bottom: 4px;
@@ -194,13 +194,13 @@ p {
   position: relative;
 }
 
-.fields-container .icon {
+.fields-container > .fields-icon {
   position: absolute;
   top: 11px;
   left: 12px;
 }
 
-.modal-form .modal-fields {
+.form-modal-lable .modal-fields {
   min-width: 100%;
   height: 40px;
   padding-top: 11px;
@@ -218,11 +218,15 @@ p {
   cursor: pointer;
 }
 
-.modal-form .comment-label {
+.modal-fields + .fields-icon {
+  transition: fill var(--transition-duration) var(--timing-function);
+}
+
+.form-modal-lable.comment-label {
   margin-bottom: 20px;
 }
 
-.modal-form .modal-comment {
+.modal-fields.field-comment {
   height: 120px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -236,47 +240,53 @@ p {
   resize: none;
 }
 
-.modal-form .modal-fields.modal-comment::placeholder {
+.modal-fields.field-comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--modal-placeholder);
 }
 
-.form-label.agree .agree-checkbox {
-  margin: 0;
-  padding: 0;
+.form-modal-lable.agree-label > .agree-checkbox {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.agree .custom-checkbox {
+.agree-label > .custom-checkbox {
   position: relative;
 
   display: block;
-  /* justify-content: center;
-  align-items: center; */
   width: 16px;
   height: 15px;
 
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    border-color var(--transition-duration) var(--timing-function);
 }
 
-.agree .agree-checkbox:checked + .custom-checkbox {
+.agree-label > .agree-checkbox:checked + .custom-checkbox {
   background-color: var(--accent-color);
   border-color: transparent;
 }
 
-.custom-checkbox .icon {
+/* .agree-label > .agree-checkbox:focus-within + .custom-checkbox {
+  outline: 1px solid var(--accent-color);
+} */
+
+/* .agree-label > .agree-checkbox:hover + .custom-checkbox {
+  border-color: var(--accent-color);
+} */
+
+.custom-checkbox > .custom-checkbox-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.modal-form .agree-text {
+.agree-label > .agree-text {
   margin-left: 8px;
 
   font-size: 14px;
@@ -284,17 +294,17 @@ p {
   color: var(--primary-text-color);
 }
 
-.agree-text .link {
+.agree-text > .link {
   color: var(--accent-color);
   text-decoration-skip-ink: none;
 }
 
-.modal-form .form-lable:focus-within .modal-fields {
+.form-modal-lable:focus-within .modal-fields {
   border-color: var(--accent-color);
   outline: none;
 }
 
-.modal-form .form-lable:focus-within .icon {
+.form-modal-lable:focus-within .fields-icon {
   fill: var(--accent-color);
 }
 
@@ -516,7 +526,7 @@ p {
   align-items: center;
 }
 
-.form-subscribe .subscription-button {
+.form-subscribe .subscribe-button {
   align-self: flex-end;
 }
 
@@ -551,7 +561,7 @@ p {
   outline: none;
 }
 
-.join-title {
+.footer-action-title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -613,7 +623,7 @@ p {
 }
 
 .buttons.hero-button,
-.buttons.subscription-button,
+.buttons.subscribe-button,
 .buttons.submit-button {
   min-width: 200px;
   height: 50px;
@@ -632,7 +642,7 @@ p {
   transition-property: background-color;
 }
 
-.buttons.subscription-button {
+.buttons.subscribe-button {
   display: flex;
   align-items: center;
   padding-right: 28px;
@@ -640,7 +650,7 @@ p {
   margin-left: 12px;
 }
 
-.buttons.subscription-button .icon {
+.buttons.subscribe-button .icon {
   margin-left: 10px;
 }
 
