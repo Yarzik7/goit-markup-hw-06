@@ -140,16 +140,13 @@ p {
   fill: currentColor;
 }
 
-/* .modal-form {
-  
-} */
-
 .form-modal > .form-title {
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
 
   color: var(--title-text-color);
@@ -171,15 +168,7 @@ p {
   margin-bottom: 30px;
 }
 
-/* .agree-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-.form-modal-lable > .input-caption {
+.form-modal-lable > .fields-caption {
   margin: 0;
   padding: 0;
   margin-bottom: 4px;
@@ -233,10 +222,6 @@ p {
   padding-left: 16px;
   padding-right: 16px;
 
-  /* font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em; */
-
   resize: none;
 }
 
@@ -287,10 +272,13 @@ p {
 }
 
 .agree-label > .agree-text {
+  display: inline-block;
+  min-width: 400px;
   margin-left: 8px;
 
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
@@ -624,8 +612,7 @@ p {
 
 .buttons.hero-button,
 .buttons.subscribe-button,
-.buttons.submit-button {
-  min-width: 200px;
+.buttons.send-button {
   height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -654,12 +641,13 @@ p {
   margin-left: 10px;
 }
 
-.buttons.submit-button {
+.buttons.send-button {
   display: block;
   padding-right: 52px;
   padding-left: 52px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 200px;
 }
 
 .buttons.filter-buttons {
