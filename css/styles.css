@@ -9,6 +9,7 @@
   --hero-button-accent: #188ce8;
   --bg-footer-color: #2f303a;
   --footer-input-border: rgba(255, 255, 255, 0.3);
+  --modal-fields-border: rgba(33, 33, 33, 0.2);
   --bg-buttons-color: #f5f4fa;
   --header-border-color: #ececec;
   --projects-border-color: #eeeeee;
@@ -59,12 +60,12 @@ p {
 
 /* Transitions and animations */
 
-.link,
+/* .link,
 .buttons,
 .projects-overlay {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
-}
+} */
 
 /* Backdrop */
 
@@ -127,7 +128,8 @@ p {
   cursor: pointer;
 }
 
-.modal-close:hover {
+.modal-close:hover,
+.modal-close:focus {
   color: var(--accent-color);
 }
 
@@ -197,10 +199,13 @@ p {
   padding-left: 42px;
   padding-right: 12px;
 
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: var(--header-logo-color);
 
   background-color: transparent;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--modal-fields-border);
   border-radius: 4px;
   transition: border-color var(--transition-duration) var(--timing-function);
 
@@ -226,9 +231,6 @@ p {
 }
 
 .modal-fields.field-comment::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: var(--modal-placeholder);
 }
 
@@ -256,6 +258,10 @@ p {
   border-color: transparent;
 }
 
+.agree-label > .agree-checkbox:checked + .custom-checkbox > .custom-checkbox-icon {
+  opacity: 1;
+}
+
 /* .agree-label > .agree-checkbox:focus-within + .custom-checkbox {
   outline: 1px solid var(--accent-color);
 } */
@@ -269,6 +275,9 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  transition: opacity var(--transition-duration) var(--timing-function);
+  opacity: 0;
 }
 
 .agree-label > .agree-text {
@@ -291,6 +300,10 @@ p {
   border-color: var(--accent-color);
   outline: none;
 }
+
+/* .form-modal-lable:hover .modal-fields {
+  border-color: var(--accent-color);
+} */
 
 .form-modal-lable:focus-within .fields-icon {
   fill: var(--accent-color);
@@ -319,12 +332,16 @@ p {
   column-gap: 10px;
 }
 
-.social .link {
-  width: 44px;
-  height: 44px;
-  padding: 12px;
+.social > .item {
+  max-width: 44px;
+  max-height: 44px;
+}
 
+.social .link {
   display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
 
   border-radius: 50%;
 }
@@ -425,7 +442,7 @@ p {
   text-decoration: none;
   color: var(--title-text-color);
 
-  transition-property: color;
+  transition: color var(--transition-duration) var(--timing-function);
 }
 
 .site-nav .link {
@@ -563,7 +580,7 @@ p {
   color: var(--primary-white-color);
 
   background-color: var(--bg-social-footer);
-  transition-property: background-color;
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 .footer-social .link:hover,
@@ -586,7 +603,7 @@ p {
   text-decoration: none;
   color: var(--footer-contacts-color);
 
-  transition-property: color;
+  transition: color var(--transition-duration) var(--timing-function);
 }
 
 .link.geolink {
@@ -626,7 +643,7 @@ p {
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-property: background-color;
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 .buttons.subscribe-button {
@@ -662,7 +679,9 @@ p {
   color: var(--title-text-color);
 
   background-color: var(--bg-buttons-color);
-  transition-property: color, background-color, box-shadow;
+  transition: color var(--transition-duration) var(--timing-function),
+    background-color var(--transition-duration) var(--timing-function),
+    box-shadow var(--transition-duration) var(--timing-function);
 }
 
 .buttons.action-buttons:hover,
@@ -718,6 +737,7 @@ p {
     url(../images/background-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   /* border: 1px solid var(--header-logo-color); */
 }
 
@@ -858,7 +878,8 @@ p {
 
 .team .link {
   color: var(--border-clients-color);
-  transition-property: color, background-color;
+  transition: color var(--transition-duration) var(--timing-function),
+    background-color var(--transition-duration) var(--timing-function);
 }
 
 .team .link:hover,
@@ -875,12 +896,14 @@ p {
 }
 
 .clients > .item {
+  max-width: 170px;
+  max-height: 92px;
   flex-basis: calc((100% - 5 * 30px) / 6);
 }
 
 .clients .link {
-  max-width: 170px;
-  max-height: 92px;
+  width: 100%;
+  height: 100%;
   padding: 16px 32px;
   display: block;
 
@@ -888,7 +911,8 @@ p {
 
   border: 1px solid var(--border-clients-color);
   border-radius: 4px;
-  transition-property: color, border;
+  transition: color var(--transition-duration) var(--timing-function),
+    border var(--transition-duration) var(--timing-function);
 }
 
 .clients .link:hover,
@@ -958,7 +982,7 @@ p {
   display: block;
 
   text-decoration: none;
-  transition-property: box-shadow;
+  transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 
 .projects .link:hover,
@@ -993,5 +1017,5 @@ p {
   color: var(--primary-white-color);
 
   background-color: var(--bg-projects-overlay);
-  transition-property: transform;
+  transition: transform var(--transition-duration) var(--timing-function);
 }
