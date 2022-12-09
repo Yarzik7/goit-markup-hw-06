@@ -57,7 +57,7 @@
       <section class="section hero-section overlay">
         <!-- <div class="container"> -->
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="buttons hero-button" data-modal-open>Замовити послугу</button>
+        <button type="button" class="buttons action-buttons hero-button" data-modal-open>Замовити послугу</button>
         <!-- </div> -->
       </section>
 
@@ -438,7 +438,7 @@
               <p class="join-title">Підпишіться на розсилку</p>
               <input type="email" name="email" placeholder="E-mail" class="footer-fields" />
             </label>
-            <button type="submit" class="buttons subscription-button">Підписатися</button>
+            <button type="submit" class="buttons action-buttons subscription-button">Підписатися</button>
           </form>
         </div>
       </div>
@@ -476,15 +476,20 @@
             </svg> -->
             </div>
           </label>
-          <label class="form-lable">
+          <label class="form-lable comment-label">
             <p class="input-lable">Коментар</p>
             <div>
-              <input type="" name="name" class="modal-fields" />
-              <!-- <svg class="icon" width="18" heiht="18">
+              <textarea name="comment" placeholder="Введіть текст" class="modal-comment"></textarea>
+            <!-- <svg class="icon" width="18" heiht="18">
               <use href=""></use>
             </svg> -->
             </div>
           </label>
+          <label class="form-label agree">
+            <input type="checkbox" name="" class="agree-checkbox">
+            <p class="agree-text">Погоджуюся з розсилкою та приймаю <a href="#" class="link">Умови договору</a></p>
+          </label>
+          <button type="submit" class="buttons action-buttons submit-button">Відправити</button>
         </form>
         <button type="button" class="modal-close" data-modal-close>
           <svg class="icon" width="11" height="11">
