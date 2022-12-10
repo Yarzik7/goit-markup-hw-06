@@ -156,24 +156,6 @@ p {
 
 .form-modal-lable {
   display: block;
-  margin-bottom: 10px;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-}
-
-.form-modal > .agree-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.form-modal-lable > .fields-caption {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.17;
@@ -181,13 +163,35 @@ p {
   color: var(--primary-text-color);
 }
 
+.form-modal-lable.agree-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 425px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.form-modal-lable > .fields-caption {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--primary-text-color);
+}
+
 .fields-container {
   position: relative;
+  margin-bottom: 10px;
+  /* outline: 1px solid tomato; */
 }
 
 .fields-container > .fields-icon {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 12px;
 }
 
@@ -199,9 +203,6 @@ p {
   padding-left: 42px;
   padding-right: 12px;
 
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: var(--header-logo-color);
 
   background-color: transparent;
@@ -246,6 +247,7 @@ p {
   display: block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
 
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
@@ -280,7 +282,7 @@ p {
   opacity: 0;
 }
 
-.agree-label > .agree-text {
+/* .agree-label > .agree-text {
   display: inline-block;
   min-width: 400px;
   margin-left: 8px;
@@ -289,9 +291,9 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
+} */
 
-.agree-text > .link {
+.agree-label > .link {
   color: var(--accent-color);
   text-decoration-skip-ink: none;
 }
@@ -305,7 +307,7 @@ p {
   border-color: var(--accent-color);
 } */
 
-.form-modal-lable:focus-within .fields-icon {
+.form-modal-lable:focus-within + .fields-icon {
   fill: var(--accent-color);
 }
 
@@ -567,6 +569,7 @@ p {
 }
 
 .footer-action-title {
+  display: block;
   margin-bottom: 20px;
 
   font-weight: 700;
